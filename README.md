@@ -22,16 +22,18 @@ Profiles can be configured in JSON and access to each profile can be restricted 
 ## Install Steps
 ### Create and setup Slack App
 1. Create New Slack app from a manifest [here](https://api.slack.com/apps)
-2. Paste the content from [manifest.yaml](./manifest.yml) and configure:
-  - test 
+2. Paste the content from [manifest.yaml](./manifest.yml)
 4. Install the Slack app to your Workspace
 5. Retrieve the _signing secret_ from the `Basic Information` page and _bot token_ from `OAuth & Permissions` page
+     - Basic Information -> App Credentials -> Signing Secret (screenshot) 
+     - OAuth & Permissions -> OAuth Tokens for Your Workspace -> Bot User OAuth Token (begins with `xoxb-`) (screenshot)
 
 ### Configuration
 Please prepare the following configuration parameters (refer to the [example file](./tg-group-profile-manager.conf)):
- - `SLACK_SECRET` Slack signing secret
- - `SLACK_BOT_TOKEN` Slack bot token (begins with `xoxb-`)
- - `TG_API_KEY` can be generated in the Setting page within the Twingate Admin Console (Read and Write permission is required)
+ - `SLACK_SECRET` Slack signing secret (retrieved from previous step above)
+ - `SLACK_BOT_TOKEN` Slack bot token (retrieved from previous step above)
+ - `TG_API_KEY` can be generated within the Twingate Admin Console (Settings -> API | Read and write permission is required)
+      - (screenshot)
  - `TG_ACCOUNT` replace with your Twingate Network Address (e.g. _test1.twingate.com_)
  - `PROFILE_CONFIG` Your profile configuration (see notes and guidance in the [schema documentation](./docs/SCHEMA.md))
 
