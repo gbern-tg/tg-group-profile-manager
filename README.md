@@ -22,9 +22,10 @@ Profiles can be configured in JSON and access to each profile can be restricted 
 ## Install Steps
 ### Create and setup Slack App
 1. Create New Slack app from a manifest [here](https://api.slack.com/apps)
-2. Paste the content from [manifest.yaml](./manifest.yml)
-3. Install the Slack app to your Workspace
-4. Retrieve the _signing secret_ from the `Basic Information` page and _bot token_ from `OAuth & Permissions` page
+2. Paste the content from [manifest.yaml](./manifest.yml) and configure:
+  - test 
+4. Install the Slack app to your Workspace
+5. Retrieve the _signing secret_ from the `Basic Information` page and _bot token_ from `OAuth & Permissions` page
 
 ### Configuration
 Please prepare the following configuration parameters (refer to the [example file](./tg-group-profile-manager.conf)):
